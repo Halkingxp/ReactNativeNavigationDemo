@@ -35,6 +35,10 @@ class DetailsScreen extends React.Component {
                     title="Go back"
                     onPress={() => this.props.navigation.goBack()}
                 />
+                <Button
+                    title="Go Fade"
+                    onPress={() => this.props.navigation.navigate("FadeInView")}
+                />
             </View>
         );
     }
