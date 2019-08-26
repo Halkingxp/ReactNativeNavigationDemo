@@ -11,6 +11,7 @@ import FadeInView from "./Pages/FadeInView"
 
 import Ionicons from "react-native-vector-icons/AntDesign"
 import HomeIconWithBadge from "./Tools/HomeIconWithBadge"
+import ScrollTabView from "./Pages/ScrollTabView"
 
 const AppNavigator = createStackNavigator({
     Home: {
@@ -18,6 +19,7 @@ const AppNavigator = createStackNavigator({
     },
     Details: DetailsScreen,
     FadeInView:FadeInView,
+    ScrollTabView:ScrollTabView,
 },
     {
         initialRouteName: "Home",
@@ -70,6 +72,12 @@ const TabNavigator = createBottomTabNavigator(
         Home: AppNavigator,
         Settings: SettingsStack,
         Switch:AppSwitchNavigator,
+        // Home1: AppNavigator,
+        // Settings1: SettingsStack,
+        // Switch1:AppSwitchNavigator,
+        // Home2: AppNavigator,
+        // Settings2: SettingsStack,
+        // Switch2:AppSwitchNavigator,
     },
     {
         defaultNavigationOptions:({navigation})=>({
@@ -77,15 +85,15 @@ const TabNavigator = createBottomTabNavigator(
                 const { routeName } = navigation.state;
                 let IconComponent = Ionicons;
                 let iconName;
-                if (routeName === 'Home') {
+                if (routeName.indexOf('Home') > -1  ) {
                   iconName = `exclamationcircle${focused ? '' : 'o'}`;
                   // Sometimes we want to add badges to some icons. 
                   // You can check the implementation below.
                   IconComponent = HomeIconWithBadge; 
-                } else if (routeName === 'Settings') {
+                } else if (routeName.indexOf('Settings') > -1) {
                   iconName = `setting`;
                 }
-                else if (routeName === 'Switch') {
+                else if (routeName.indexOf('Switch') > -1) {
                     iconName = `windowso`;
                   }
                 // You can return any component that you like here!
@@ -96,6 +104,8 @@ const TabNavigator = createBottomTabNavigator(
             activeTintColor: 'tomato',
             inactiveTintColor: 'gray',
         },
+        swipeEnabled:true,
+        width:2000,
     }
 );
 

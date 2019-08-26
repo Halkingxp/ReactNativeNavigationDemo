@@ -41,6 +41,10 @@ class HomeScreen extends React.Component {
                     title="Go to FadeInView"
                     onPress={() => this.props.navigation.navigate('FadeInView', { itemId: "aaa" })}
                 />
+                <Button style={styles.button}
+                    title="ScrollTabView"
+                    onPress={() => this.props.navigation.navigate('ScrollTabView', { itemId: "aaa" })}
+                />
             </View>
         );
     }
