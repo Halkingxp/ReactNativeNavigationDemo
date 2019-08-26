@@ -48,6 +48,8 @@ const SettingsStack = createStackNavigator({
                 fontWeight: 'bold',
             },
         },
+        mode: 'modal',
+        headerMode: 'none',
     }
 );
 
