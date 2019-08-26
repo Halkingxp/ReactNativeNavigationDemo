@@ -32,7 +32,11 @@ const AppNavigator = createStackNavigator({
             headerTitleStyle: {
                 fontWeight: 'bold',
             },
+            headerTransparent:true,
+            // cardShadowEnabled:false,
         },
+        cardShadowEnabled:false,
+        headerTransparent:true,
     }
 );
 
@@ -54,6 +58,7 @@ const SettingsStack = createStackNavigator({
         },
         mode: 'modal',
         headerMode: 'none',
+        cardShadowEnabled:false,
     }
 );
 

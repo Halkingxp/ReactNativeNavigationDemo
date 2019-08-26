@@ -6,7 +6,7 @@ class DetailsScreen extends React.Component {
     static navigationOptions = {
         title: 'DetailsScreen',
         headerStyle: {
-            backgroundColor: '#14511e00',
+            backgroundColor: '#14511e',
             height:30,
         },
         headerTintColor: '#fff',

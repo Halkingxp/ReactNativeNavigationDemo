@@ -31,7 +31,7 @@ class HomeScreen extends React.Component {
     };
     render() {
         return (
-            <View style={{ flex: 1, alignItems: "center", justifyContent: "flex-start", backgroundColor: "#fff8dc", }}>
+            <View style={{ flex: 1, alignItems: "center", justifyContent: "flex-start", backgroundColor: "#fff8dc",marginTop:50, }}>
                 <Text>Home Screen</Text>
                 <Button style = {styles.button}
                     title="Go to Details"
